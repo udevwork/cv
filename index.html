@@ -1,11 +1,126 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Мой сайт на GitHub Pages</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kotelnykov Denys – iOS Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <h1>Привет, GitHub Pages!</h1>
+<body class="bg-white text-gray-900 font-sans">
+  <main class="max-w-3xl mx-auto p-6 space-y-12">
+    <!-- Hero Section -->
+    <section class="text-center">
+      <h1 class="text-5xl font-bold">Kotelnykov Denys</h1>
+      <p class="mt-4 text-lg text-gray-700">iOS Developer с 6-летним опытом end-to-end разработки: от идеи и UX до backend и релизов в App Store. Специализация: SwiftUI, Combine, архитектура и оптимизация производительности.</p>
+    </section>
+
+    <!-- Contact -->
+    <section>
+      <h2 class="text-2xl font-semibold border-b border-gray-200 pb-1">Контакты</h2>
+      <ul class="mt-2 space-y-2">
+        <li>Email: <a href="mailto:denkot@gmail.com" class="underline">denkot@gmail.com</a></li>
+        <li>Telegram: <a href="https://t.me/imbalanceFighter" class="underline">@imbalanceFighter</a></li>
+        <li>GitHub: <a href="https://github.com/udevwork" class="underline">github.com/udevwork</a></li>
+      </ul>
+    </section>
+
+    <!-- Skills -->
+    <section>
+      <h2 class="text-2xl font-semibold border-b border-gray-200 pb-1">Навыки</h2>
+      <div class="mt-4 grid grid-cols-2 gap-4">
+        <ul class="space-y-1">
+          <li>Swift, SwiftUI, UIKit, SnapKit</li>
+          <li>Combine, RxSwift, Texture</li>
+          <li>GRDB, Realm, SwiftData, SQL</li>
+          <li>Alamofire, WebSockets, REST, URLSession</li>
+        </ul>
+        <ul class="space-y-1">
+          <li>Firebase, Crashlytics, RevenueCat, AppHud, Adapty</li>
+          <li>Figma, Zeplin, Photoshop</li>
+          <li>Vapor, Firebase Firestore, NodeJS</li>
+          <li>Jira, Git, Code Reviews, Team Leadership</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section>
+      <h2 class="text-2xl font-semibold border-b border-gray-200 pb-1">Опыт работы</h2>
+
+      <div class="mt-4 space-y-6">
+        <div>
+          <h3 class="text-xl font-semibold">Timrus Group</h3>
+          <p class="text-gray-600 italic">Project Manager & iOS Developer, сентябрь 2024 – настоящее время</p>
+          <ul class="mt-2 list-disc list-inside space-y-1">
+            <li>Coffee Talk – social app для новых знакомств</li>
+            <li>Wallet Creator – .pkpass editor с on-device signing</li>
+            <li>Brusher – маркетплейс цифровых активов</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold">Triada</h3>
+          <p class="text-gray-600 italic">iOS Developer, август 2022 – август 2024</p>
+          <ul class="mt-2 list-disc list-inside space-y-1">
+            <li>Разработка высоконагруженного e-commerce приложения</li>
+            <li>Миграция Objective-C в Swift</li>
+            <li>Интеграция платежей и увеличение crash-free rate до 99.9%</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold">Syazan OU</h3>
+          <p class="text-gray-600 italic">iOS Developer, январь 2021 – июль 2022</p>
+          <ul class="mt-2 list-disc list-inside space-y-1">
+            <li>AdBlocker и VPN приложения с нуля</li>
+            <li>Видео-приложение в стиле TikTok</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold">Midland Retail Group</h3>
+          <p class="text-gray-600 italic">iOS Swift Developer, сентябрь 2019 – декабрь 2020</p>
+          <ul class="mt-2 list-disc list-inside space-y-1">
+            <li>VoIP клиент с чатом и звонками</li>
+            <li>AsyncDisplayKit для оптимизации UI</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold">GameTrek</h3>
+          <p class="text-gray-600 italic">Unity3D Developer, январь 2019 – май 2019</p>
+          <ul class="mt-2 list-disc list-inside space-y-1">
+            <li>Оптимизация игровых сервисов для TELE2</li>
+            <li>Проекты: Walk the Talk, Secret Government</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section>
+      <h2 class="text-2xl font-semibold border-b border-gray-200 pb-1">Собственные проекты</h2>
+      <ul class="mt-4 list-disc list-inside space-y-2">
+        <li>Order Book Trading – интерфейс трейдинга в реальном времени</li>
+        <li>Winst Photo Collage – фоторедактор с анимациями</li>
+        <li>Overcam – образовательное фото-приложение</li>
+        <li>Watchface Notes – заметки с поддержкой watchOS</li>
+        <li>FastApp – UI toolkit для paywall и onboarding</li>
+        <li>Housing App – управление жильцами и документами</li>
+        <li>GPT Tamagotchi – AI-питомец с эволюцией поведения</li>
+      </ul>
+    </section>
+
+    <!-- Education -->
+    <section>
+      <h2 class="text-2xl font-semibold border-b border-gray-200 pb-1">Образование</h2>
+      <p class="mt-2">Kharkiv National University of Economics, 2018 – бакалавр экономической информатики и информационных систем</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-sm text-gray-500">
+      © 2025 Kotelnykov Denys
+    </footer>
+  </main>
 </body>
 </html>
