@@ -1,126 +1,376 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kotelnykov Denys – iOS Developer</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Denys Kotelnykov — CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #0b1021;
+      --panel: rgba(255, 255, 255, 0.04);
+      --muted: #d1d5e7;
+      --text: #f6f7fb;
+      --accent: #72e7c8;
+      --border: rgba(255, 255, 255, 0.12);
+      --shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at 20% 20%, rgba(114, 231, 200, 0.08), transparent 30%),
+                  radial-gradient(circle at 80% 0%, rgba(132, 193, 255, 0.15), transparent 35%),
+                  linear-gradient(145deg, #0a0f1d 0%, #0f152a 50%, #0b1021 100%);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 48px 20px 80px;
+      display: flex;
+      justify-content: center;
+    }
+
+    main {
+      width: min(1100px, 100%);
+      background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 40px 44px 48px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(20px);
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 3vw, 2.6rem);
+      letter-spacing: -0.02em;
+    }
+
+    .role {
+      color: var(--muted);
+      font-weight: 500;
+      font-size: 1.05rem;
+    }
+
+    section + section {
+      margin-top: 26px;
+    }
+
+    h2 {
+      margin: 0 0 12px 0;
+      font-size: 1.15rem;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    p, li { color: var(--text); line-height: 1.6; }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px 20px;
+    }
+
+    .contact-grid {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.98rem;
+    }
+
+    .contact-grid th, .contact-grid td {
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      text-align: left;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease, color 0.2s ease;
+    }
+
+    a:hover {
+      color: #8ff3d7;
+      border-color: #8ff3d7;
+    }
+
+    ul { padding-left: 18px; margin: 8px 0 0; }
+    ul.tight { padding-left: 16px; margin-top: 6px; }
+
+    .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+
+    .experience { display: grid; gap: 18px; }
+
+    .experience h3 { margin: 0; font-size: 1.05rem; }
+    .experience .meta { color: var(--muted); font-size: 0.95rem; margin-top: 4px; }
+
+    blockquote {
+      margin: 0;
+      padding: 14px 18px;
+      border-left: 3px solid var(--accent);
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 12px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; }
+
+    @media (max-width: 640px) {
+      body { padding: 28px 16px 40px; }
+      main { padding: 30px 22px; }
+      .contact-grid th, .contact-grid td { font-size: 0.95rem; }
+    }
+  </style>
 </head>
-<body class="bg-white text-gray-900 font-sans">
-  <main class="max-w-3xl mx-auto p-6 space-y-12">
-    <!-- Hero Section -->
-    <section class="text-center">
-      <h1 class="text-5xl font-bold">Kotelnykov Denys</h1>
-      <p class="mt-4 text-lg text-gray-700">iOS Developer с 6-летним опытом end-to-end разработки: от идеи и UX до backend и релизов в App Store. Специализация: SwiftUI, Combine, архитектура и оптимизация производительности.</p>
+<body>
+  <main>
+    <header>
+      <h1>Denys Kotelnykov</h1>
+      <span class="role">Senior iOS Engineer / Team Lead</span>
+    </header>
+
+    <section class="panel">
+      <table class="contact-grid">
+        <thead>
+          <tr>
+            <th>Email</th>
+            <th>Telegram</th>
+            <th>GitHub</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="mailto:denkot@gmail.com">denkot@gmail.com</a></td>
+            <td><a href="https://t.me/imbalanceFighter">t.me/imbalanceFighter</a></td>
+            <td><a href="https://github.com/udevwork/">github.com/udevwork</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin:12px 0 0; color: var(--muted);">Work format: Full-time / Part-time / Contract / Freelance · Availability: Full-day • Flexible schedule • Remote</p>
     </section>
 
-    <!-- Contact -->
     <section>
-      <h2 class="text-2xl font-semibold border-b border-gray-200 pb-1">Контакты</h2>
-      <ul class="mt-2 space-y-2">
-        <li>Email: <a href="mailto:kotelnykov.contact@gmail.com" class="underline">kotelnykov.contact@gmail.com</a></li>
-        <li>Telegram: <a href="https://t.me/imbalanceFighter" class="underline">@imbalanceFighter</a></li>
-        <li>GitHub: <a href="https://github.com/udevwork" class="underline">github.com/udevwork</a></li>
-      </ul>
-    </section>
-
-    <!-- Skills -->
-    <section>
-      <h2 class="text-2xl font-semibold border-b border-gray-200 pb-1">Навыки</h2>
-      <div class="mt-4 grid grid-cols-2 gap-4">
-        <ul class="space-y-1">
-          <li>Swift, SwiftUI, UIKit, SnapKit</li>
-          <li>Combine, RxSwift, Texture</li>
-          <li>GRDB, Realm, SwiftData, SQL</li>
-          <li>Alamofire, WebSockets, REST, URLSession</li>
-        </ul>
-        <ul class="space-y-1">
-          <li>Firebase, Crashlytics, RevenueCat, AppHud, Adapty</li>
-          <li>Figma, Zeplin, Photoshop</li>
-          <li>Vapor, Firebase Firestore, NodeJS</li>
-          <li>Jira, Git, Code Reviews, Team Leadership</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Experience -->
-    <section>
-      <h2 class="text-2xl font-semibold border-b border-gray-200 pb-1">Опыт работы</h2>
-
-      <div class="mt-4 space-y-6">
-        <div>
-          <h3 class="text-xl font-semibold">Timrus Group</h3>
-          <p class="text-gray-600 italic">Project Manager & iOS Developer, сентябрь 2024 – настоящее время</p>
-          <ul class="mt-2 list-disc list-inside space-y-1">
-            <li>Coffee Talk – social app для новых знакомств</li>
-            <li>Wallet Creator – .pkpass editor с on-device signing</li>
-            <li>Brusher – маркетплейс цифровых активов</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="text-xl font-semibold">Triada</h3>
-          <p class="text-gray-600 italic">iOS Developer, август 2022 – август 2024</p>
-          <ul class="mt-2 list-disc list-inside space-y-1">
-            <li>Разработка высоконагруженного e-commerce приложения</li>
-            <li>Миграция Objective-C в Swift</li>
-            <li>Интеграция платежей и увеличение crash-free rate до 99.9%</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="text-xl font-semibold">Syazan OU</h3>
-          <p class="text-gray-600 italic">iOS Developer, январь 2021 – июль 2022</p>
-          <ul class="mt-2 list-disc list-inside space-y-1">
-            <li>AdBlocker и VPN приложения с нуля</li>
-            <li>Видео-приложение в стиле TikTok</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="text-xl font-semibold">Midland Retail Group</h3>
-          <p class="text-gray-600 italic">iOS Swift Developer, сентябрь 2019 – декабрь 2020</p>
-          <ul class="mt-2 list-disc list-inside space-y-1">
-            <li>VoIP клиент с чатом и звонками</li>
-            <li>AsyncDisplayKit для оптимизации UI</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="text-xl font-semibold">GameTrek</h3>
-          <p class="text-gray-600 italic">Unity3D Developer, январь 2019 – май 2019</p>
-          <ul class="mt-2 list-disc list-inside space-y-1">
-            <li>Оптимизация игровых сервисов для TELE2</li>
-            <li>Проекты: Walk the Talk, Secret Government</li>
+      <h2>Summary</h2>
+      <div class="summary-grid">
+        <p class="panel">Product-minded <strong>Senior iOS Engineer / Team Lead</strong> with <strong>6 years</strong> of end-to-end delivery (idea → UX → architecture → implementation → release). Shipped <strong>16+ own apps</strong> to the App Store and delivered multiple commercial products for iOS/iPadOS/macOS/watchOS. Strong in building <strong>high-performance, reliable, real-time</strong> apps and in <strong>automation of release/localization workflows</strong>.</p>
+        <div class="panel">
+          <p style="margin:0 0 8px;"><strong>Core strengths</strong></p>
+          <ul class="tight">
+            <li><strong>Scale & reliability:</strong> high-load products, performance tuning (Instruments), crash-free improvement <strong>80% → 99.9%</strong>, clean architecture (SwiftUI/UIKit, Combine/RxSwift).</li>
+            <li><strong>Real-time & integrations:</strong> WebSockets, complex networking, external APIs (incl. <strong>Binance API</strong> / market data), offline-first & sync patterns.</li>
+            <li><strong>Release & growth automation:</strong> internal tooling around <strong>App Store Connect API</strong> (auth, metadata export/import, app/version management, localization + screenshots upload), <strong>fastlane</strong> workflows.</li>
+            <li><strong>Localization engineering:</strong> codebase string search, automated key generation, updates to localization files, refactoring hardcoded strings to localized APIs.</li>
+            <li><strong>Deep platform work:</strong> <strong>Metal shaders</strong>, camera/editing pipelines, <strong>.pkpass</strong> tooling with on-device signing (OpenSSL in Swift).</li>
+            <li><strong>Leadership:</strong> led teams up to <strong>6</strong> engineers, mentoring, cross-functional coordination (iOS / backend / design), delivery ownership.</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Projects -->
     <section>
-      <h2 class="text-2xl font-semibold border-b border-gray-200 pb-1">Собственные проекты</h2>
-      <ul class="mt-4 list-disc list-inside space-y-2">
-        <li>Order Book Trading – интерфейс трейдинга в реальном времени</li>
-        <li>Winst Photo Collage – фоторедактор с анимациями</li>
-        <li>Overcam – образовательное фото-приложение</li>
-        <li>Watchface Notes – заметки с поддержкой watchOS</li>
-        <li>FastApp – UI toolkit для paywall и onboarding</li>
-        <li>Housing App – управление жильцами и документами</li>
-        <li>GPT Tamagotchi – AI-питомец с эволюцией поведения</li>
-      </ul>
+      <h2>Work Experience</h2>
+      <div class="experience">
+        <div class="panel">
+          <h3>Timrus Group — Project Manager & iOS Developer</h3>
+          <div class="meta">Sep 2024 – Present</div>
+          <ul>
+            <li>Owned planning and delivery: feature decomposition, prioritization, and cross-team coordination (iOS / backend / design).</li>
+            <li>Shipped and supported multiple products with different business models and technical constraints.</li>
+            <li>Selected products:</li>
+            <ul class="tight">
+              <li><strong>Coffee Talk</strong> — social networking app.</li>
+              <li><strong>CollyHive</strong> — geek culture aggregator.</li>
+              <li><strong>Wallet Creator</strong> — <code>.pkpass</code> editor with <strong>on-device signing</strong> (no backend).</li>
+              <li><strong>Brusher</strong> — digital asset marketplace with adaptive UI, backend integration, analytics, and subscriptions.</li>
+            </ul>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>Triada — iOS Developer / Team Lead</h3>
+          <div class="meta">Aug 2022 – Aug 2024</div>
+          <ul>
+            <li>Led iOS engineering for a high-load e-commerce product with <strong>millions of users</strong>.</li>
+            <li>Drove modernization: migrated <strong>Objective-C → Swift</strong>, moved UI away from Storyboards to <strong>UIKit</strong>, integrated payments.</li>
+            <li>Reliability impact: improved crash-free rate from <strong>80% to 99.9%</strong>.</li>
+            <li>Managed a team of <strong>5</strong> developers; improved delivery workflow with custom Jira tooling.</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>Siazan — iOS Developer</h3>
+          <div class="meta">Jan 2021 – Jul 2022</div>
+          <ul>
+            <li>Built iOS apps from scratch: <strong>AdBlocker</strong>, <strong>VPN</strong>, TikTok-style short video app.</li>
+            <li>Worked end-to-end: implementation, iteration, and delivery.</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>Midland Retail Group — iOS Swift Developer</h3>
+          <div class="meta">Sep 2019 – Dec 2020</div>
+          <ul>
+            <li>Developed <strong>Numbers</strong> — VoIP client with <strong>Realm sync</strong>, <strong>WebSocket</strong> chat, and audio/video calls.</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>GameTrek — Unity3D Developer</h3>
+          <div class="meta">Jan 2019 – May 2019</div>
+          <ul>
+            <li>Optimized gaming services for TELE2.</li>
+            <li>Designed RTS mechanics and quest systems (Walk the Talk, Secret Government).</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <!-- Education -->
     <section>
-      <h2 class="text-2xl font-semibold border-b border-gray-200 pb-1">Образование</h2>
-      <p class="mt-2">Kharkiv National University of Economics, 2018 – бакалавр экономической информатики и информационных систем</p>
+      <h2>Selected Projects</h2>
+      <blockquote>The goal of this section is fast scanning: what it is, what’s hard about it, why it matters.</blockquote>
+      <div class="experience" style="margin-top:14px;">
+        <div class="panel">
+          <h3>OverCam — camera + reference overlays + on-device AI editing</h3>
+          <ul>
+            <li>Built a full camera stack with manual controls and composition overlays; designed UX for “repeat the reference shot precisely”.</li>
+            <li>Added on-device AI editing: relighting, background changes, retouching, artistic filters.</li>
+            <li>Links: <a href="https://apps.apple.com/app/id6514316633">App Store</a> • <a href="/overcam">Website</a></li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>EasyWallet — offline <code>.pkpass</code> editor with local signing</h3>
+          <ul>
+            <li>Built a standalone <code>.pkpass</code> generator/editor with <strong>on-device signing</strong> (no backend dependency).</li>
+            <li>Bundled OpenSSL into a Swift framework and executed signing workflow directly from Swift.</li>
+            <li>Links: <a href="https://apps.apple.com/app/id6740567185">App Store</a></li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>Lapy — high-load e-commerce (Tech Lead)</h3>
+          <ul>
+            <li>Scaled product handling <strong>5,000 users/hour</strong>; built dynamic product lists (UIKit + diffable data sources) and complex checkout flows.</li>
+            <li>Led tech + process in a 20+ person team: internal tooling, task tracking, KPI monitoring, planning syncs.</li>
+            <li>Links: <a href="https://apps.apple.com/us/app/id1222315361">App Store</a></li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>NanoApps: AI App Generator — prompt → mini apps on-device</h3>
+          <ul>
+            <li>Generates mini “calculator-style” apps from a prompt; stores and runs them locally.</li>
+            <li>Parses JavaScript and renders UI natively via a custom interpreter + custom UI system.</li>
+            <li>Links: <a href="https://apps.apple.com/us/app/nanoapps-ai-app-generator/id6749795966">App Store</a></li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>WatchFace Notes — notes on Apple Watch with real-time sync</h3>
+          <ul>
+            <li>Built Apple Watch notes app with seamless sync across iOS/iPadOS/macOS.</li>
+            <li>Supports watch-face note creation + widgets on iPhone and macOS.</li>
+            <li>Links: <a href="https://apps.apple.com/app/id6621271754">App Store</a></li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>Xcstringer — macOS <code>.xcstring</code> localization tool</h3>
+          <ul>
+            <li>AI-assisted translation workflow for <code>.xcstring</code>: generation + parsing + automation to speed up localization.</li>
+            <li>Links: <a href="https://apps.apple.com/us/app/xcstringer/id6749861498">App Store</a></li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="text-center text-sm text-gray-500">
-      © 2025 Kotelnykov Denys
-    </footer>
+    <section>
+      <h2>Additional shipped apps (selection)</h2>
+      <div class="panel">
+        <ul class="tight">
+          <li><strong>CollyHive</strong> — feed UX, caching, smooth rendering, notifications, analytics. Links: <a href="https://collyhive.com/">Website</a> • <a href="https://apps.apple.com/app/id6747309879">App Store</a></li>
+          <li><strong>Coffee Talk</strong> — social network: feed/profile, messaging flows, analytics, backend integration. Links: <a href="https://thecoffeetalk.app/">Website</a> • <a href="https://apps.apple.com/app/id6743162954">App Store</a></li>
+          <li><strong>Brusher</strong> — marketplace: subscriptions, analytics, backend integrations, scalable architecture. Links: <a href="https://brusher.pro/">Website</a> • <a href="https://apps.apple.com/app/id6737310103">App Store</a></li>
+          <li><strong>Order Book Trading</strong> — iOS/iPadOS/macOS: real-time crypto tracking, anomaly detection, notifications, charts/indicators, news, heat index. Links: <a href="https://apps.apple.com/app/order-book-trading/id1590351885">App Store</a></li>
+          <li><strong>Noomeera</strong> — social network + VoIP, WebSocket chat + Realm sync, Texture integration. Links: <a href="http://automa8n.net/en/">Website</a> • <a href="https://apps.apple.com/ru/app/id583704287">App Store</a></li>
+          <li><strong>Winst</strong> — habits, performance-first UI, clean architecture, onboarding + analytics. Links: <a href="https://apps.apple.com/app/id6446229606">App Store</a></li>
+          <li><strong>Sleep helper</strong> — guided routines, audio flows, responsive UI, analytics iteration. Links: <a href="https://apps.apple.com/app/id6736951056">App Store</a></li>
+          <li><strong>Photo editor</strong> — streamlined UX, performance-first editing and export pipeline. Links: <a href="https://apps.apple.com/app/id6745002423">App Store</a></li>
+          <li><strong>FastApp</strong> — SwiftUI component library for rapid delivery. Links: <a href="https://github.com/udevwork/FastApp">GitHub</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="panel">
+          <strong>iOS / Apple platforms</strong>
+          <ul class="tight">
+            <li>Swift • SwiftUI • UIKit • Combine • RxSwift • SnapKit • Texture (AsyncDisplayKit) • StoreKit</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <strong>Data / Networking</strong>
+          <ul class="tight">
+            <li>GRDB • Realm • SwiftData • SQL • REST • WebSocket • Alamofire</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <strong>Quality / Performance</strong>
+          <ul class="tight">
+            <li>Instruments • Performance monitoring • Memory leak tracking • Architecture design • Clean Architecture • MVVM</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <strong>Monetization / Analytics</strong>
+          <ul class="tight">
+            <li>Subscriptions • RevenueCat • Adapty • Analytics</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <strong>Backend / Infrastructure</strong>
+          <ul class="tight">
+            <li>Vapor (Swift) • Firestore • NodeJS</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <strong>Product / Collaboration</strong>
+          <ul class="tight">
+            <li>Team leadership • Mentoring • Hiring • Cross-functional coordination • Jira • Git</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <strong>Design / Other</strong>
+          <ul class="tight">
+            <li>Figma • Zeplin • UI/UX • Spline • Unity3D</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="panel">
+        Kharkiv National University of Economics (2018) — Bachelor’s Degree in Economic Informatics and Information Systems
+      </div>
+    </section>
   </main>
 </body>
 </html>
