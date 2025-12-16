@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Denys Kotelnykov — Резюме</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --muted: #404040;
+      --accent: #0f4c81;
+      --border: #dcdcdc;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 32px 18px 60px;
+    }
+
+    main {
+      width: min(860px, 100%);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .language-switch {
+      display: flex;
+      justify-content: flex-end;
+      font-weight: 600;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 2.6rem);
+      letter-spacing: -0.02em;
+    }
+
+    .role {
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 1.05rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 1.05rem;
+    }
+
+    p, li { line-height: 1.6; }
+
+    ul { padding-left: 18px; margin: 0; }
+    ul.tight { padding-left: 18px; }
+
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .contact-item {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      color: var(--muted);
+    }
+
+    .contact-label {
+      min-width: 80px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .entry {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding: 12px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .entry:first-of-type { border-top: none; padding-top: 0; }
+
+    blockquote {
+      margin: 0;
+      padding: 12px 16px;
+      border-left: 3px solid var(--border);
+      color: var(--muted);
+      background: #f9f9f9;
+    }
+
+    @media (max-width: 640px) {
+      body { padding: 24px 14px 40px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <nav class="language-switch">
+      <a href="index.html">English version</a>
+    </nav>
+    <header>
+      <h1>Denys Kotelnykov</h1>
+      <span class="role">Senior iOS инженер / Тимлид</span>
+    </header>
+
+    <section>
+      <h2>Контакты</h2>
+      <ul class="contact-list">
+        <li class="contact-item"><span class="contact-label">Email</span><a href="mailto:denkot@gmail.com">denkot@gmail.com</a></li>
+        <li class="contact-item"><span class="contact-label">Telegram</span><a href="https://t.me/imbalanceFighter">t.me/imbalanceFighter</a></li>
+        <li class="contact-item"><span class="contact-label">GitHub</span><a href="https://github.com/udevwork/">github.com/udevwork</a></li>
+        <li class="contact-item"><span class="contact-label">Формат</span><span>Full-time / Part-time / Contract / Freelance · Доступность: полный день • гибкий график • удаленно</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>О себе</h2>
+      <p>Продуктовый <strong>Senior iOS инженер / Тимлид</strong> с <strong>6 годами</strong> полного цикла разработки (идея → UX → архитектура → реализация → релиз). Выложил в App Store <strong>16+ собственных приложений</strong> и доставил несколько коммерческих продуктов для iOS/iPadOS/macOS/watchOS. Сильные стороны — создание <strong>высокопроизводительных, надежных, работающих в реальном времени</strong> приложений и <strong>автоматизация релиза/локализации</strong>.</p>
+      <div>
+        <h3>Ключевые навыки</h3>
+        <ul class="tight">
+          <li><strong>Масштаб и надежность:</strong> высокие нагрузки, тюнинг производительности (Instruments), рост crash-free <strong>80% → 99.9%</strong>, чистая архитектура (SwiftUI/UIKit, Combine/RxSwift).</li>
+          <li><strong>Реальное время и интеграции:</strong> WebSocket, сложные сетевые стеки, внешние API (в т.ч. <strong>Binance API</strong> / рыночные данные), offline-first и синхронизация.</li>
+          <li><strong>Релизы и рост:</strong> внутренние тулзы вокруг <strong>App Store Connect API</strong> (аутентификация, экспорт/импорт метаданных, управление приложениями/версиями, загрузка локализаций и скриншотов), пайплайны <strong>fastlane</strong>.</li>
+          <li><strong>Инжиниринг локализации:</strong> поиск строк в коде, автогенерация ключей, обновление файлов локализации, рефакторинг захардкоженных строк.</li>
+          <li><strong>Глубокая работа с платформой:</strong> <strong>Metal шейдеры</strong>, камеры/пайплайны редактирования, инструменты для <strong>.pkpass</strong> с подписью на устройстве (OpenSSL на Swift).</li>
+          <li><strong>Лидерство:</strong> руководил командами до <strong>6</strong> инженеров, менторинг, координация кросс-команд (iOS / backend / дизайн), ownership доставки.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Опыт</h2>
+      <div class="entry">
+        <h3>Timrus Group — Project Manager & iOS Developer</h3>
+        <div class="meta">Сен 2024 – Настоящее время</div>
+        <ul>
+          <li>Вел планирование и доставку: декомпозиция, приоритизация, координация между iOS / backend / дизайном.</li>
+          <li>Релизил и поддерживал несколько продуктов с разными бизнес-моделями и техническими ограничениями.</li>
+          <li>Выбранные продукты:</li>
+          <ul class="tight">
+            <li><strong>Coffee Talk</strong> — социальная сеть.</li>
+            <li><strong>CollyHive</strong> — агрегатор гик-культуры.</li>
+            <li><strong>Wallet Creator</strong> — редактор <code>.pkpass</code> с <strong>подписью на устройстве</strong> (без backend).</li>
+            <li><strong>Brusher</strong> — маркетплейс цифровых активов с адаптивным UI, интеграцией с backend, аналитикой и подписками.</li>
+          </ul>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <h3>Triada — iOS Developer / Team Lead</h3>
+        <div class="meta">Авг 2022 – Авг 2024</div>
+        <ul>
+          <li>Вёл iOS-направление высоконагруженного e-commerce продукта с <strong>миллионами пользователей</strong>.</li>
+          <li>Драйвил модернизацию: миграция <strong>Objective-C → Swift</strong>, уход от Storyboards к <strong>UIKit</strong>, интеграция платежей.</li>
+          <li>Повысил crash-free с <strong>80% до 99.9%</strong>.</li>
+          <li>Управлял командой из <strong>5</strong> разработчиков; улучшил процессы доставки кастомными тулзами под Jira.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <h3>Siazan — iOS Developer</h3>
+        <div class="meta">Янв 2021 – Июл 2022</div>
+        <ul>
+          <li>С нуля сделал iOS-приложения: <strong>AdBlocker</strong>, <strong>VPN</strong>, TikTok-стиль коротких видео.</li>
+          <li>Работал end-to-end: реализация, итерации, релизы.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <h3>Midland Retail Group — iOS Swift Developer</h3>
+        <div class="meta">Сен 2019 – Дек 2020</div>
+        <ul>
+          <li>Разработал <strong>Numbers</strong> — VoIP-клиент с <strong>Realm-синком</strong>, <strong>WebSocket</strong>-чатом и аудио/видео звонками.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <h3>GameTrek — Unity3D Developer</h3>
+        <div class="meta">Янв 2019 – Май 2019</div>
+        <ul>
+          <li>Оптимизировал игровые сервисы для TELE2.</li>
+          <li>Проектировал механики RTS и систему квестов (Walk the Talk, Secret Government).</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Выбранные проекты</h2>
+      <blockquote>Цель блока — быстрый скан: что за проект, чем сложен, почему важен.</blockquote>
+      <div class="entry">
+        <h3>OverCam — камера + референс-оверлеи + on-device AI-редактирование</h3>
+        <ul>
+          <li>Собрал полный стек камеры с ручными настройками и композиционными оверлеями; продумал UX для точного повторения референсного кадра.</li>
+          <li>Добавил on-device AI-редактирование: перелайтинг, замена фона, ретушь, художественные фильтры.</li>
+          <li>Ссылки: <a href="https://apps.apple.com/app/id6514316633">App Store</a> • <a href="/overcam">Website</a></li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <h3>EasyWallet — офлайн-редактор <code>.pkpass</code> с локальной подписью</h3>
+        <ul>
+          <li>Сделал автономный генератор/редактор <code>.pkpass</code> с <strong>подписью на устройстве</strong> (без зависимости от backend).</li>
+          <li>Встроил OpenSSL в Swift-фреймворк и выполнял процесс подписания прямо из Swift.</li>
+          <li>Ссылки: <a href="https://apps.apple.com/app/id6740567185">App Store</a></li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <h3>Lapy — высоконагруженный e-commerce (Tech Lead)</h3>
+        <ul>
+          <li>Масштабировал продукт на <strong>5 000 пользователей/час</strong>; строил динамические списки (UIKit + diffable data sources) и сложные checkout-потоки.</li>
+          <li>Вёл технику и процессы в команде 20+: внутренние тулзы, трекинг задач, мониторинг KPI, планирование.</li>
+          <li>Ссылки: <a href="https://apps.apple.com/us/app/id1222315361">App Store</a></li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <h3>NanoApps: AI App Generator — prompt → мини-приложения на устройстве</h3>
+        <ul>
+          <li>Генерирует мини «калькуляторные» приложения из промпта; хранит и запускает их локально.</li>
+          <li>Парсит JavaScript и отрисовывает UI нативно через кастомный интерпретатор + собственную UI-систему.</li>
+          <li>Ссылки: <a href="https://apps.apple.com/us/app/nanoapps-ai-app-generator/id6749795966">App Store</a></li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <h3>WatchFace Notes — заметки на Apple Watch с синком в реальном времени</h3>
+        <ul>
+          <li>Создал приложение заметок для Apple Watch с бесшовной синхронизацией на iOS/iPadOS/macOS.</li>
+          <li>Поддерживает создание заметок прямо с циферблата и виджеты на iPhone и macOS.</li>
+          <li>Ссылки: <a href="https://apps.apple.com/app/id6621271754">App Store</a></li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <h3>Xcstringer — macOS-тул для локализации <code>.xcstring</code></h3>
+        <ul>
+          <li>AI-поддерживаемый процесс перевода <code>.xcstring</code>: генерация, парсинг и автоматизация для ускорения локализации.</li>
+          <li>Ссылки: <a href="https://apps.apple.com/us/app/xcstringer/id6749861498">App Store</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Дополнительные выпущенные приложения (выборочно)</h2>
+      <ul class="tight">
+        <li><strong>CollyHive</strong> — лента, кеширование, плавный рендеринг, уведомления, аналитика. Ссылки: <a href="https://collyhive.com/">Website</a> • <a href="https://apps.apple.com/app/id6747309879">App Store</a></li>
+        <li><strong>Coffee Talk</strong> — соцсеть: лента/профиль, мессенджер, аналитика, интеграция с backend. Ссылки: <a href="https://thecoffeetalk.app/">Website</a> • <a href="https://apps.apple.com/app/id6743162954">App Store</a></li>
+        <li><strong>Brusher</strong> — маркетплейс: подписки, аналитика, интеграции с backend, масштабируемая архитектура. Ссылки: <a href="https://brusher.pro/">Website</a> • <a href="https://apps.apple.com/app/id6737310103">App Store</a></li>
+        <li><strong>Order Book Trading</strong> — iOS/iPadOS/macOS: отслеживание крипты в реальном времени, поиск аномалий, уведомления, графики/индикаторы, новости, heat index. Ссылки: <a href="https://apps.apple.com/app/order-book-trading/id1590351885">App Store</a></li>
+        <li><strong>Noomeera</strong> — соцсеть + VoIP, WebSocket-чат + Realm-синк, интеграция Texture. Ссылки: <a href="http://automa8n.net/en/">Website</a> • <a href="https://apps.apple.com/ru/app/id583704287">App Store</a></li>
+        <li><strong>Winst</strong> — привычки, производительный UI, чистая архитектура, онбординг + аналитика. Ссылки: <a href="https://apps.apple.com/app/id6446229606">App Store</a></li>
+        <li><strong>Sleep helper</strong> — гайды и аудиопотоки, отзывчивый UI, итерации на аналитике. Ссылки: <a href="https://apps.apple.com/app/id6736951056">App Store</a></li>
+        <li><strong>Photo editor</strong> — упрощенный UX, производительный пайплайн редактирования и экспорта. Ссылки: <a href="https://apps.apple.com/app/id6745002423">App Store</a></li>
+        <li><strong>FastApp</strong> — библиотека SwiftUI-компонентов для быстрого релиза. Ссылки: <a href="https://github.com/udevwork/FastApp">GitHub</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Навыки</h2>
+      <div class="entry">
+        <strong>iOS / Apple платформы</strong>
+        <ul class="tight">
+          <li>Swift • SwiftUI • UIKit • Combine • RxSwift • SnapKit • Texture (AsyncDisplayKit) • StoreKit</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <strong>Data / Networking</strong>
+        <ul class="tight">
+          <li>GRDB • Realm • SwiftData • SQL • REST • WebSocket • Alamofire</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <strong>Quality / Performance</strong>
+        <ul class="tight">
+          <li>Instruments • Performance monitoring • Memory leak tracking  Architecture design • Clean Architecture • MVVM</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <strong>Монетизация / Аналитика</strong>
+        <ul class="tight">
+          <li>Subscriptions • RevenueCat • Adapty • Analytics</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <strong>Backend / Infrastructure</strong>
+        <ul class="tight">
+          <li>Vapor (Swift) • Firestore • NodeJS</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <strong>Product / Collaboration</strong>
+        <ul class="tight">
+          <li>Team leadership • Mentoring • Hiring • Cross-functional coordination • Jira • Git</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <strong>Design / Other</strong>
+        <ul class="tight">
+          <li>Figma • Zeplin • UI/UX • Spline • Unity3D</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Образование</h2>
+      <p>Харьковский национальный экономический университет (2018) — бакалавр экономической информатики и информационных систем</p>
+    </section>
+  </main>
+</body>
+</html>
