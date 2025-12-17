@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Приложения и метрики</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --muted: #404040;
+      --accent: #0f4c81;
+      --border: #dcdcdc;
+      --positive: #0b8a4d;
+      --negative: #c53030;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 32px 18px 60px;
+    }
+
+    main {
+      width: min(960px, 100%);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .language-switch {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      font-weight: 600;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 2.6rem);
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle { color: var(--muted); font-weight: 500; }
+
+    section { display: flex; flex-direction: column; gap: 12px; }
+
+    h2 {
+      margin: 0;
+      font-size: 1.05rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    p { line-height: 1.6; margin: 0; }
+
+    a { color: var(--accent); text-decoration: underline; }
+
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .contact-item {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      color: var(--muted);
+    }
+
+    .contact-label {
+      min-width: 90px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 760px;
+      background: #fff;
+    }
+
+    th, td {
+      padding: 12px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 700;
+      white-space: nowrap;
+      background: #f7f7f7;
+    }
+
+    tr:last-child td { border-bottom: none; }
+
+    .app-name { display: flex; flex-direction: column; gap: 4px; }
+    .platform { color: var(--muted); font-size: 0.95rem; }
+
+    .delta { font-weight: 600; font-size: 0.9rem; }
+    .delta.positive { color: var(--positive); }
+    .delta.negative { color: var(--negative); }
+    .delta.neutral { color: var(--muted); }
+
+    .metric { display: flex; gap: 6px; align-items: baseline; }
+
+    @media (max-width: 640px) {
+      body { padding: 24px 14px 40px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <nav class="language-switch">
+      <a href="ru.html">Резюме</a>
+      <a href="index.html">en</a>
+    </nav>
+
+    <header>
+      <h1>Приложения и метрики</h1>
+      <div class="subtitle">Срез ключевых продуктов (App Store)</div>
+    </header>
+
+    <section>
+      <h2>Список приложений</h2>
+      <p>Данные взяты из последнего отчёта. MetaSync исключён по запросу.</p>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Название</th>
+              <th>Показы</th>
+              <th>Единицы</th>
+              <th>Поступления</th>
+              <th>Сеансы</th>
+              <th>Сборы</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="app-name">
+                <a href="https://apps.apple.com/us/app/voice-to-note-midi/id6752893444">Voice To Note — MIDI</a>
+                <span class="platform">iOS</span>
+              </td>
+              <td class="metric">3,79 тыс.</td>
+              <td class="metric">164 <span class="delta positive">+31%</span></td>
+              <td class="metric">79 <span class="delta positive">+33%</span></td>
+              <td class="metric">13 <span class="delta neutral">0%</span></td>
+              <td class="metric">—</td>
+            </tr>
+            <tr>
+              <td class="app-name">
+                <a href="https://apps.apple.com/us/app/nano-ai-app-generator/id6749795966">Nano: AI App Generator</a>
+                <span class="platform">iOS</span>
+              </td>
+              <td class="metric">2,86 тыс. <span class="delta negative">−2%</span></td>
+              <td class="metric">48 <span class="delta positive">+5%</span></td>
+              <td class="metric">45 <span class="delta positive">+5%</span></td>
+              <td class="metric">11 <span class="delta negative">−15%</span></td>
+              <td class="metric">0</td>
+            </tr>
+            <tr>
+              <td class="app-name">
+                <a href="https://apps.apple.com/us/app/flying-monkey-if/id6755310540">Flying monkey - IF</a>
+                <span class="platform">iOS</span>
+              </td>
+              <td class="metric">2,64 тыс. <span class="delta positive">+4%</span></td>
+              <td class="metric">35 <span class="delta negative">−10%</span></td>
+              <td class="metric">45 <span class="delta negative">−30%</span></td>
+              <td class="metric">23 <span class="delta positive">+64%</span></td>
+              <td class="metric">9 <span class="delta negative">−31%</span></td>
+            </tr>
+            <tr>
+              <td class="app-name">
+                <a href="https://apps.apple.com/us/app/watchface-notes/id6621271754">WatchFace Notes</a>
+                <span class="platform">iOS</span>
+              </td>
+              <td class="metric">2,26 тыс. <span class="delta negative">−5%</span></td>
+              <td class="metric">36 <span class="delta negative">−10%</span></td>
+              <td class="metric">35 <span class="delta negative">−8%</span></td>
+              <td class="metric">0 <span class="delta negative">−71%</span></td>
+              <td class="metric">9 <span class="delta neutral">0%</span></td>
+            </tr>
+            <tr>
+              <td class="app-name">
+                <a href="https://apps.apple.com/us/app/drumpad-2000s-dnb/id6755050543">DrumPad - 2000s DnB</a>
+                <span class="platform">iOS</span>
+              </td>
+              <td class="metric">1,85 тыс. <span class="delta positive">+3%</span></td>
+              <td class="metric">33 <span class="delta neutral">0%</span></td>
+              <td class="metric">26 <span class="delta neutral">0%</span></td>
+              <td class="metric">0 <span class="delta negative">−26%</span></td>
+              <td class="metric">5 <span class="delta negative">−36%</span></td>
+            </tr>
+            <tr>
+              <td class="app-name">
+                <a href="https://apps.apple.com/us/app/photo-to-pdf-doc-generator/id6754212816">Photo to PDF - Doc Generator</a>
+                <span class="platform">iOS</span>
+              </td>
+              <td class="metric">1,58 тыс.</td>
+              <td class="metric">20 <span class="delta negative">−72%</span></td>
+              <td class="metric">16 <span class="delta negative">−10%</span></td>
+              <td class="metric">0 <span class="delta negative">−62%</span></td>
+              <td class="metric">5 <span class="delta negative">−67%</span></td>
+            </tr>
+            <tr>
+              <td class="app-name">
+                <a href="https://apps.apple.com/us/app/content-wizard/id6751346843">Content Wizard</a>
+                <span class="platform">iOS</span>
+              </td>
+              <td class="metric">1,18 тыс.</td>
+              <td class="metric">5 <span class="delta neutral">0%</span></td>
+              <td class="metric">9 <span class="delta neutral">0%</span></td>
+              <td class="metric">0 <span class="delta neutral">0%</span></td>
+              <td class="metric">2 <span class="delta neutral">0%</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>Описание приложений</h2>
+      <ul class="contact-list">
+        <li class="contact-item">
+          <div class="app-name">
+            <a href="https://apps.apple.com/us/app/voice-to-note-midi/id6752893444">Voice To Note — MIDI</a>
+          </div>
+          <div>
+            Распознаёт тональность голоса с микрофона и мгновенно отображает ноту на пианоролле. Можно набросать мелодию, прослушать,
+            сохранить дорожку в MIDI и использовать её в любых DAW — формат совместим со всеми.
+          </div>
+        </li>
+        <li class="contact-item">
+          <div class="app-name">
+            <a href="https://apps.apple.com/us/app/nano-ai-app-generator/id6749795966">Nano: AI App Generator</a>
+          </div>
+          <div>
+            Генерирует по промпту JavaScript-калькуляторы, которые работают локально и офлайн. Например: вычислить площадь круга,
+            время пути при заданной скорости, любые формулы с готовым UI, полями ввода и кнопкой «Посчитать».
+          </div>
+        </li>
+        <li class="contact-item">
+          <div class="app-name">
+            <a href="https://apps.apple.com/us/app/flying-monkey-if/id6755310540">Flying monkey - IF</a>
+          </div>
+          <div>
+            Текстовая игра с выбором вариантов действий. Каждое решение ведёт историю в более напряжённое состояние; нужно пройти
+            пять шагов и добраться до хорошей концовки, иначе сценарий уходит в драматический исход.
+          </div>
+        </li>
+        <li class="contact-item">
+          <div class="app-name">
+            <a href="https://apps.apple.com/us/app/watchface-notes/id6621271754">WatchFace Notes</a>
+          </div>
+          <div>
+            Заметки для iOS и Apple Watch, которые можно вывести прямо на циферблат. Синхронизация между устройствами происходит
+            офлайн и мгновенно; записи доступны как обычные заметки, а главное — в виджете на always-on экране.
+          </div>
+        </li>
+        <li class="contact-item">
+          <div class="app-name">
+            <a href="https://apps.apple.com/us/app/drumpad-2000s-dnb/id6755050543">DrumPad - 2000s DnB</a>
+          </div>
+          <div>
+            Бесплатный drumpad с минимальной задержкой отклика. В комплекте более 700 семплов для ударных и других звуков, чтобы
+            сразу играть без ограничений.
+          </div>
+        </li>
+        <li class="contact-item">
+          <div class="app-name">
+            <a href="https://apps.apple.com/us/app/photo-to-pdf-doc-generator/id6754212816">Photo to PDF - Doc Generator</a>
+          </div>
+          <div>
+            Делает снимок документа, таблицы или заметки и конвертирует его в аккуратно отформатированный PDF. Распознаёт текст и
+            заново верстает документ с заголовками, таблицами и базовым форматированием — не просто вкладывает фото.
+          </div>
+        </li>
+        <li class="contact-item">
+          <div class="app-name">
+            <a href="https://apps.apple.com/us/app/content-wizard/id6751346843">Content Wizard</a>
+          </div>
+          <div>
+            Менеджер текстовых постов. Исправляет ошибки одним нажатием, переводит на любой язык без перезаписи оригинала, делится
+            публикациями. Можно отмечать черновики и опубликованные записи и настраивать пуши-напоминания о публикациях.
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Контакты</h2>
+      <ul class="contact-list">
+        <li class="contact-item"><span class="contact-label">Email</span><a href="mailto:udevwork@gmail.com">udevwork@gmail.com</a></li>
+        <li class="contact-item"><span class="contact-label">Telegram</span><a href="https://t.me/imbalanceFighter">t.me/imbalanceFighter</a></li>
+        <li class="contact-item"><span class="contact-label">GitHub</span><a href="https://github.com/udevwork/">github.com/udevwork</a></li>
+        <li class="contact-item"><span class="contact-label">Формат</span><span>Full-time / Part-time / Contract / Freelance · Доступность: полный день • гибкий график • удалённо</span></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
