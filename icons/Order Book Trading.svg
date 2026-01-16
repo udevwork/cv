@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="orderbook" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#12b886" />
+      <stop offset="100%" stop-color="#0b7285" />
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#orderbook)" />
+  <g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-width="6">
+    <path d="M36 80v-20" />
+    <path d="M56 88v-36" />
+    <path d="M76 76v-28" />
+    <path d="M96 92v-48" />
+  </g>
+  <text x="64" y="44" text-anchor="middle" font-family="'Inter', 'Segoe UI', sans-serif" font-size="22" font-weight="700" fill="#ffffff">OB</text>
+</svg>
