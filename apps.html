@@ -7,217 +7,41 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      color-scheme: light;
-      --bg: #ffffff;
-      --text: #1a1a1a;
-      --muted: #404040;
-      --accent: #0f4c81;
-      --border: #e5e5e5;
-      --card: #f9f9fb;
-    }
-
-    * { box-sizing: border-box; }
-
-    html { font-size: 75%; }
-
-    body {
-      margin: 0;
-      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      min-height: 100vh;
-      padding: 32px 18px 72px;
-    }
-
-    main {
-      width: min(720px, 100%);
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-    }
-
-    .language-switch {
-      display: flex;
-      justify-content: flex-end;
-      gap: 12px;
-      font-weight: 600;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    header {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      padding-bottom: 12px;
-      border-bottom: none;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(2rem, 4vw, 2.6rem);
-      letter-spacing: -0.02em;
-    }
-
-    .subtitle { color: var(--muted); font-weight: 500; }
-
-    section { display: flex; flex-direction: column; gap: 16px; }
-
-    h2 {
-      margin: 0;
-      font-size: 1.05rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    p { line-height: 1.6; margin: 0; }
-
-    a { color: var(--accent); text-decoration: underline; }
-
-    .info-list {
-      margin: 0;
-      padding-left: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    .apps {
-      display: flex;
-      flex-direction: column;
-      gap: 22px;
-    }
-
-    .app-card {
-      background: var(--card);
-      border: none;
-      border-radius: 0;
-      padding: 18px 18px 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .app-top {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-    }
-
-    .app-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      min-width: 240px;
-      flex: 1 1 260px;
-    }
-
-    .app-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      object-fit: cover;
-      flex-shrink: 0;
-    }
-
-    .app-meta {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .platforms {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .app-title { font-size: 1.05rem; font-weight: 700; margin: 0; }
-    .platform { color: var(--muted); font-size: 0.85rem; }
-
-    .stats {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      align-items: stretch;
-      flex: 1 1 220px;
-      min-width: 220px;
-      margin-left: auto;
-    }
-
-    .stat {
-      display: flex;
-      flex-direction: row;
-      gap: 6px;
-      padding: 10px 12px;
-      background: #fff;
-      border: none;
-      border-radius: 0;
-      align-items: baseline;
-    }
-
-    .stat-label { font-size: 0.85rem; color: var(--muted); letter-spacing: 0.02em; text-transform: uppercase; }
-    .stat-value { font-weight: 700; font-size: 1.02rem; }
-
-    .description { line-height: 1.6; color: var(--muted); }
-
-    .app-analytics {
-      width: 100%;
-      border-radius: 0;
-      border: none;
-      background: #fff;
-      display: block;
-    }
-
-    .contact-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .contact-item {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      color: var(--muted);
-    }
-
-    .contact-label {
-      min-width: 90px;
-      font-weight: 600;
-      color: var(--text);
-    }
-
-    @media (max-width: 640px) {
-      body { padding: 24px 14px 52px; }
-      .app-card { padding: 16px 14px; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main>
-    <nav class="language-switch">
-      <a href="apps-ru.html">ru</a>
+  <header class="layout-header">
+    <a href="index.html" class="logo">udevwork</a>
+    <nav class="header-links">
+      <a href="index.html" class="header-link">Resume</a>
+      <a href="apps.html" class="header-link">Apps</a>
+      <a href="https://github.com/udevwork/" class="header-link">GitHub</a>
+      <a href="https://t.me/imbalanceFighter" class="header-link">Telegram</a>
     </nav>
+    <div class="header-right">
+      <nav class="language-switch">
+        <a href="apps-ru.html">RU</a>
+      </nav>
+    </div>
+  </header>
 
-    <header>
-      <h1>iOS apps for sale</h1>
-      <div class="subtitle">List of App Store products</div>
-    </header>
+  <div class="layout-container">
+    <aside class="layout-sidebar">
+      <nav class="sidebar-nav">
+        <div class="sidebar-title">Apps</div>
+        <a href="#info" class="sidebar-link">General Info</a>
+        <a href="#contacts" class="sidebar-link">Contacts</a>
+        <a href="#catalog" class="sidebar-link">Catalog</a>
+      </nav>
+    </aside>
 
-    <section>
+    <main class="layout-main">
+      <header class="content-header" id="info">
+        <h1>iOS apps for sale</h1>
+        <div class="subtitle">List of App Store products</div>
+      </header>
+
+      <section>
       <ul class="info-list">
         <li>All apps run on auto-renewable subscriptions via RevenueCat.</li>
         <li>All apps have been on the App Store for 6 months to 3 years.</li>
@@ -232,7 +56,7 @@
       </ul>
     </section>
 
-    <section>
+    <section id="contacts">
       <h2>Contacts</h2>
       <ul class="contact-list">
         <li class="contact-item"><span class="contact-label">Email</span><a href="mailto:udevwork@gmail.com">udevwork@gmail.com</a></li>
@@ -240,7 +64,7 @@
       </ul>
     </section>
 
-    <section>
+    <section id="catalog">
       <div class="apps">
         <article class="app-card">
           <div class="app-top">
@@ -544,6 +368,7 @@
         </article>
       </div>
     </section>
-  </main>
+    </main>
+  </div>
 </body>
 </html>
