@@ -458,3 +458,83 @@ blockquote {
     grid-template-columns: 1fr;
   }
 }
+
+/* Print / Save as PDF */
+@media print {
+  /* Hide non-content elements */
+  .layout-header,
+  .layout-sidebar,
+  .btn-download {
+    display: none !important;
+  }
+
+  /* Reset dark theme to print-friendly colors */
+  :root {
+    color-scheme: light;
+  }
+
+  body {
+    background: #ffffff;
+    color: #1a1a1a;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Layout: full width, no sidebar gap */
+  .layout-container {
+    display: block;
+  }
+
+  .layout-main {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  /* Typography: dark text */
+  h1, h3, strong, .sidebar-title {
+    color: #000000;
+  }
+
+  h2 {
+    color: #4338ca;
+  }
+
+  .role, .subtitle, .meta {
+    color: #555555;
+  }
+
+  p, li, .contact-item {
+    color: #1a1a1a;
+  }
+
+  .contact-label {
+    color: #000000;
+  }
+
+  /* Links: visible and underlined for print */
+  a {
+    color: #2563eb;
+    text-decoration: underline;
+  }
+
+  /* Borders */
+  .content-header,
+  .entry {
+    border-color: #e5e5e5;
+  }
+
+  /* Code blocks */
+  code {
+    background: #f3f4f6;
+    color: #1a1a1a;
+  }
+
+  /* Page breaks */
+  .entry {
+    break-inside: avoid;
+  }
+
+  section {
+    break-inside: avoid;
+  }
+}
