@@ -210,6 +210,7 @@ a:hover {
 
 .header-links {
   display: flex;
+  align-items: center;
   gap: 20px;
   flex: 1;
 }
@@ -230,6 +231,35 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 16px;
+}
+
+/* Download PDF Button */
+.btn-download {
+  background: #5856d6;
+  color: #ffffff;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s, opacity 0.2s;
+  white-space: nowrap;
+}
+
+.btn-download:hover {
+  background: #6e6ce0;
+  transform: translateY(-1px);
+}
+
+.btn-download:active {
+  transform: translateY(0);
+}
+
+.btn-download:disabled {
+  opacity: 0.6;
+  cursor: wait;
 }
 
 /* Contacts */

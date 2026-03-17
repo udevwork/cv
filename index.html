@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js" defer></script>
 </head>
 <body>
   <header class="layout-header">
@@ -17,6 +18,7 @@
       <a href="apps.html" class="header-link">Apps</a>
       <a href="https://github.com/udevwork/" class="header-link">GitHub</a>
       <a href="https://t.me/imbalanceFighter" class="header-link">Telegram</a>
+      <button onclick="downloadPDF()" class="btn-download">Download PDF</button>
     </nav>
 
   </header>
@@ -211,5 +213,35 @@
     </section>
     </main>
   </div>
+  <script>
+    function downloadPDF() {
+      const btn = document.querySelector('.btn-download');
+      btn.textContent = 'Generating…';
+      btn.disabled = true;
+
+      const element = document.querySelector('.layout-main');
+      const opt = {
+        margin:       [10, 12, 10, 12],
+        filename:     'Denys_Kotelnykov_CV.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2, useCORS: true },
+        jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' },
+        pagebreak:    { mode: ['avoid-all', 'css', 'legacy'] }
+      };
+
+      html2pdf().set(opt).from(element).outputPdf('blob').then(function(blob) {
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = url;
+        a.download = 'Denys_Kotelnykov_CV.pdf';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        btn.textContent = 'Download PDF';
+        btn.disabled = false;
+      });
+    }
+  </script>
 </body>
 </html>
