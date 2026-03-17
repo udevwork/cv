@@ -18,11 +18,7 @@
       <a href="https://github.com/udevwork/" class="header-link">GitHub</a>
       <a href="https://t.me/imbalanceFighter" class="header-link">Telegram</a>
     </nav>
-    <div class="header-right">
-      <nav class="language-switch">
-        <a href="ru.html">RU</a>
-      </nav>
-    </div>
+
   </header>
 
   <div class="layout-container">
@@ -32,8 +28,7 @@
         <a href="#summary" class="sidebar-link">Summary</a>
         <a href="#contacts" class="sidebar-link">Contacts</a>
         <a href="#experience" class="sidebar-link">Work Experience</a>
-        <a href="#projects" class="sidebar-link">Selected Projects</a>
-        <a href="#more-apps" class="sidebar-link">Additional Apps</a>
+        <a href="#projects" class="sidebar-link">Projects</a>
         <a href="#skills" class="sidebar-link">Skills</a>
         <a href="#education" class="sidebar-link">Education</a>
       </nav>
@@ -42,7 +37,7 @@
     <main class="layout-main">
       <header class="content-header" id="summary">
         <h1>Denys Kotelnykov</h1>
-        <span class="role">Senior iOS Engineer / Team Lead</span>
+        <span class="role">Senior Native iOS Engineer / AI-Native Developer / Agentic AI Engineer</span>
       </header>
 
       <section id="contacts">
@@ -57,7 +52,7 @@
 
     <section>
       <h2>Summary</h2>
-      <p>Product-minded <strong>Senior iOS Engineer / Team Lead</strong> with <strong>6 years</strong> of end-to-end delivery (idea → UX → architecture → implementation → release). Shipped <strong>16+ own apps</strong> to the App Store and delivered multiple commercial products for iOS/iPadOS/macOS/watchOS. Strong in building <strong>high-performance, reliable, real-time</strong> apps and in <strong>automation of release/localization workflows</strong>.</p>
+      <p>Product-minded <strong>Senior Native iOS Engineer</strong> and <strong>AI-Native Developer</strong> with <strong>6 years</strong> of end-to-end delivery (idea → UX → architecture → implementation → release). Shipped <strong>16+ own apps</strong> to the App Store and delivered multiple commercial products for iOS/iPadOS/macOS/watchOS. Designs and ships <strong>autonomous AI pipelines</strong> that dramatically accelerate development and automate business processes — with a focus on <strong>ROI and Time-to-Market</strong>. Strong in building <strong>high-performance, reliable, real-time</strong> apps and in <strong>AI-driven automation of release, localization, and content workflows</strong>.</p>
       <div>
         <h3>Core strengths</h3>
         <ul class="tight">
@@ -67,6 +62,7 @@
           <li><strong>Localization engineering:</strong> codebase string search, automated key generation, updates to localization files, refactoring hardcoded strings to localized APIs.</li>
           <li><strong>Deep platform work:</strong> <strong>Metal shaders</strong>, camera/editing pipelines, <strong>.pkpass</strong> tooling with on-device signing (OpenSSL in Swift).</li>
           <li><strong>Leadership:</strong> led teams up to <strong>6</strong> engineers, mentoring, cross-functional coordination (iOS / backend / design), delivery ownership.</li>
+          <li><strong>AI & Automation:</strong> designed autonomous AI agents on <strong>n8n + Claude</strong>, cutting internal product Time-to-Market by <strong>3×</strong>. Built a Threads social-media scraper (n8n + custom JS) with automated video generation. Uses <strong>ComfyUI</strong> with fine-tuned models for content-factory video production. Orchestration: <strong>n8n, CrewAI</strong>. LLM environments: <strong>Codex, Claude Code, Antigravity</strong>.</li>
         </ul>
       </div>
     </section>
@@ -97,6 +93,7 @@
           <li>Drove modernization: migrated <strong>Objective-C → Swift</strong>, moved UI away from Storyboards to <strong>UIKit</strong>, integrated payments.</li>
           <li>Reliability impact: improved crash-free rate from <strong>80% to 99.9%</strong>.</li>
           <li>Managed a team of <strong>5</strong> developers; improved delivery workflow with custom Jira tooling.</li>
+          <li>Built a custom <strong>KPI tracking system in Swift</strong>: 2D performance charts per employee, task completion statistics, status-transition analytics (<em>In Progress → In Review</em> and other flows) with automated reports for management.</li>
         </ul>
       </div>
 
@@ -128,64 +125,15 @@
     </section>
 
     <section id="projects">
-      <h2>Selected Projects</h2>
-      <div class="entry">
-        <h3>OverCam — camera + reference overlays + on-device AI editing</h3>
-        <ul>
-          <li>Built a full camera stack with manual controls and composition overlays; designed UX for “repeat the reference shot precisely”.</li>
-          <li>Added on-device AI editing: relighting, background changes, retouching, artistic filters.</li>
-          <li>Links: <a href="https://apps.apple.com/app/id6514316633">App Store</a> • <a href="/overcam">Website</a></li>
-        </ul>
-      </div>
-
-      <div class="entry">
-        <h3>EasyWallet — offline <code>.pkpass</code> editor with local signing</h3>
-        <ul>
-          <li>Built a standalone <code>.pkpass</code> generator/editor with <strong>on-device signing</strong> (no backend dependency).</li>
-          <li>Bundled OpenSSL into a Swift framework and executed signing workflow directly from Swift.</li>
-          <li>Links: <a href="https://apps.apple.com/app/id6740567185">App Store</a></li>
-        </ul>
-      </div>
-
-      <div class="entry">
-        <h3>Lapy — high-load e-commerce (Tech Lead)</h3>
-        <ul>
-          <li>Scaled product handling <strong>5,000 users/hour</strong>; built dynamic product lists (UIKit + diffable data sources) and complex checkout flows.</li>
-          <li>Led tech + process in a 20+ person team: internal tooling, task tracking, KPI monitoring, planning syncs.</li>
-          <li>Links: <a href="https://apps.apple.com/us/app/id1222315361">App Store</a></li>
-        </ul>
-      </div>
-
-      <div class="entry">
-        <h3>NanoApps: AI App Generator — prompt → mini apps on-device</h3>
-        <ul>
-          <li>Generates mini “calculator-style” apps from a prompt; stores and runs them locally.</li>
-          <li>Parses JavaScript and renders UI natively via a custom interpreter + custom UI system.</li>
-          <li>Links: <a href="https://apps.apple.com/us/app/nanoapps-ai-app-generator/id6749795966">App Store</a></li>
-        </ul>
-      </div>
-
-      <div class="entry">
-        <h3>WatchFace Notes — notes on Apple Watch with real-time sync</h3>
-        <ul>
-          <li>Built Apple Watch notes app with seamless sync across iOS/iPadOS/macOS.</li>
-          <li>Supports watch-face note creation + widgets on iPhone and macOS.</li>
-          <li>Links: <a href="https://apps.apple.com/app/id6621271754">App Store</a></li>
-        </ul>
-      </div>
-
-      <div class="entry">
-        <h3>Xcstringer — macOS <code>.xcstring</code> localization tool</h3>
-        <ul>
-          <li>AI-assisted translation workflow for <code>.xcstring</code>: generation + parsing + automation to speed up localization.</li>
-          <li>Links: <a href="https://apps.apple.com/us/app/xcstringer/id6749861498">App Store</a></li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="more-apps">
-      <h2>Additional shipped apps</h2>
+      <h2>Projects</h2>
       <ul class="tight">
+        <li><strong>SensorCore</strong> — AI-native logging & analytics platform (iOS, Android, Web). ML-powered data-science engine connected via MCP: error detection, conversion funnels, user-flow analysis, behavior prediction, cohort comparison, anomaly detection, and association-rule mining — fully replaces a dedicated analyst on the team. Includes an <strong>iOS SDK</strong>, <strong>npm package</strong>, and <strong>CrewAI integration</strong>. Links: <a href="https://sensorcore.dev/">Website</a> • <a href="https://github.com/sensorcore/ios">iOS SDK</a> • <a href="https://github.com/sensorcore/js">JS SDK</a> • <a href="https://github.com/sensorcore/crewai">CrewAI</a></li>
+        <li><strong>OverCam</strong> — camera with ghost overlays, manual controls, on-device AI editing (relighting, background changes, retouching). Links: <a href="https://apps.apple.com/app/id6514316633">App Store</a> • <a href="/overcam">Website</a></li>
+        <li><strong>EasyWallet</strong> — standalone <code>.pkpass</code> generator/editor with on-device signing (OpenSSL in Swift, no backend). Links: <a href="https://apps.apple.com/app/id6740567185">App Store</a></li>
+        <li><strong>Lapy</strong> — high-load e-commerce (Tech Lead), 5,000 users/hour, dynamic product lists, complex checkout, 20+ person team. Links: <a href="https://apps.apple.com/us/app/id1222315361">App Store</a></li>
+        <li><strong>NanoApps</strong> — generates mini apps from a prompt; runs locally via custom JS interpreter + native UI. Links: <a href="https://apps.apple.com/us/app/nanoapps-ai-app-generator/id6749795966">App Store</a></li>
+        <li><strong>WatchFace Notes</strong> — Apple Watch notes with seamless iOS/iPadOS/macOS sync + watch-face widgets. Links: <a href="https://apps.apple.com/app/id6621271754">App Store</a></li>
+        <li><strong>Xcstringer</strong> — macOS <code>.xcstring</code> localization tool with AI-assisted translation workflow. Links: <a href="https://apps.apple.com/us/app/xcstringer/id6749861498">App Store</a></li>
         <li><strong>CollyHive</strong> — feed UX, caching, smooth rendering, notifications, analytics. Links: <a href="https://collyhive.com/">Website</a> • <a href="https://apps.apple.com/app/id6747309879">App Store</a></li>
         <li><strong>Coffee Talk</strong> — social network: feed/profile, messaging flows, analytics, backend integration. Links: <a href="https://thecoffeetalk.app/">Website</a> • <a href="https://apps.apple.com/app/id6743162954">App Store</a></li>
         <li><strong>Brusher</strong> — marketplace: subscriptions, analytics, backend integrations, scalable architecture. Links: <a href="https://brusher.pro/">Website</a> • <a href="https://apps.apple.com/app/id6737310103">App Store</a></li>
@@ -195,6 +143,13 @@
         <li><strong>Sleep helper</strong> — guided routines, audio flows, responsive UI, analytics iteration. Links: <a href="https://apps.apple.com/app/id6736951056">App Store</a></li>
         <li><strong>Photo editor</strong> — streamlined UX, performance-first editing and export pipeline. Links: <a href="https://apps.apple.com/app/id6745002423">App Store</a></li>
         <li><strong>FastApp</strong> — SwiftUI component library for rapid delivery. Links: <a href="https://github.com/udevwork/FastApp">GitHub</a></li>
+        <li><strong>Voice To Note — MIDI</strong> — detects vocal pitch and shows notes on a piano roll; save tracks to MIDI for any DAW. Links: <a href="https://apps.apple.com/us/app/voice-to-note-midi/id6752893444">App Store</a></li>
+        <li><strong>Flying monkey - IF</strong> — text-based choice-driven interactive fiction game. Links: <a href="https://apps.apple.com/us/app/flying-monkey-if/id6755310540">App Store</a></li>
+        <li><strong>DrumPad - 2000s DnB</strong> — drumpad with minimal latency, 700+ drum and FX samples. Links: <a href="https://apps.apple.com/us/app/drumpad-2000s-dnb/id6755050543">App Store</a></li>
+        <li><strong>Photo to PDF</strong> — photo-to-document converter with text recognition and formatted PDF output. Links: <a href="https://apps.apple.com/us/app/photo-to-pdf-doc-generator/id6754212816">App Store</a></li>
+        <li><strong>Content Wizard</strong> — text post manager with AI corrections, translations, drafts, and push reminders. Links: <a href="https://apps.apple.com/us/app/content-wizard/id6751346843">App Store</a></li>
+        <li><strong>AI Edit Remove BG</strong> — AI background removal with clean PNG/SVG export and vectorization. Links: <a href="https://apps.apple.com/app/id6753985278">App Store</a></li>
+        <li><strong>Revivy Photo Enhancer AI</strong> — restores old photos, upscales images, brings back color, AI preset library. Links: <a href="https://apps.apple.com/app/id6754460278">App Store</a></li>
       </ul>
     </section>
 
@@ -234,6 +189,12 @@
         <strong>Product / Collaboration</strong>
         <ul class="tight">
           <li>Team leadership • Mentoring • Hiring • Cross-functional coordination • Jira • Git</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <strong>AI & Automation</strong>
+        <ul class="tight">
+          <li>n8n • CrewAI • Claude Code • Codex • Antigravity • ComfyUI • Custom JS automation</li>
         </ul>
       </div>
       <div class="entry">
