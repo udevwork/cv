@@ -72,6 +72,17 @@
     <section id="experience">
       <h2>Work Experience</h2>
       <div class="entry">
+        <h3>Synery — Founding Engineer / Tech Lead</h3>
+        <div class="meta">Mar 2026 – Present</div>
+        <ul>
+          <li>Built and shipped an <strong>AI companion on Telegram</strong> from zero: <strong>0 → 2,000+</strong> paying-capable users in <strong>4 months</strong>.</li>
+          <li>Architected the backend on <strong>.NET 10 / PostgreSQL</strong> with an <strong>agentic LLM pipeline</strong> (Semantic Kernel, tool calling, long-term user memory) and a custom lifecycle-scenario engine.</li>
+          <li>Delivered a <strong>React 19</strong> admin panel with a segment query builder and broadcast tooling for targeted campaigns.</li>
+          <li>Owned monetization and ops: <strong>Telegram Mini App billing</strong>, subscription payments, <strong>PostHog</strong> analytics, and one-command deploy infrastructure.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
         <h3>SensorCore (Independent) — Founder & Full-Stack Engineer</h3>
         <div class="meta">2024 – Present</div>
         <ul>
@@ -134,6 +145,9 @@
     <section id="projects">
       <h2>Projects</h2>
       <ul class="tight">
+        <li><strong>NAGORI — PS1/PSP Emulator</strong> — shipped solo to the App Store: ~12k lines of Swift/SwiftUI, <strong>Metal</strong> renderer, gamepad-adaptive UI, StoreKit subscriptions, 6 localizations. Optimized two <strong>C/C++ emulation cores</strong> at source level — <strong>1,217 lines of ARM64/NEON</strong> across 30 files (SIMD interpreter paths, hand-written vertex decoders, restructured instruction dispatch) — cutting CPU cost of demanding PSP scenes from <strong>50–70% down to 27–39%</strong> of a core, measured on device with Instruments incl. thermal-state tracking. Diagnosed and fixed upstream open-source defects (init crash, cache-invalidation bug); patches prepared for contribution. Links: <a href="https://apps.apple.com/app/id6790321094">App Store</a></li>
+        <li><strong>Synery</strong> — AI companion on Telegram (Founding Engineer / Tech Lead), <strong>0 → 2,000+</strong> paying-capable users in 4 months. <strong>.NET 10 / PostgreSQL</strong> backend with an agentic LLM pipeline (Semantic Kernel, tool calling, long-term user memory) and a custom lifecycle-scenario engine; <strong>React 19</strong> admin panel with segment query builder and broadcasts; Telegram Mini App billing, subscription payments, PostHog analytics, one-command deploy infrastructure.</li>
+        <li><strong>Kinovecher</strong> — Telegram bot + Mini App + web video streaming platform (Python/FastAPI, aiogram 3, PostgreSQL, React 19 + TS; solo, in production). Reverse-engineered a closed AJAX API and defeated three layers of bot protection: <strong>ASN-level banning</strong> (403 for every datacenter network — mapped clean vs. banned ASNs, migrated hosts, kept a proxy path behind an env flag), an <strong>Anubis proof-of-work gateway</strong> (&lt;2 ms), and obfuscated stream URLs with <strong>IP-bound tokens expiring daily</strong> — resolved server-side at playback time, with parallel Range probes filtering out dead CDN edges. Series with voiceover/season/episode selection and cross-device resume (HMAC-validated Telegram initData / Login Widget). Links: <a href="https://films.rezka42.com/">Website</a></li>
         <li><strong>SensorCore</strong> — AI-native logging & analytics platform (iOS, Android, Web). ML-powered data-science engine connected via MCP: error detection, conversion funnels, user-flow analysis, behavior prediction, cohort comparison, anomaly detection, and association-rule mining — fully replaces a dedicated analyst on the team. Includes an <strong>iOS SDK</strong>, <strong>npm package</strong>, and <strong>CrewAI integration</strong>. Links: <a href="https://sensorcore.dev/">Website</a> • <a href="https://github.com/sensorcore/ios">iOS SDK</a> • <a href="https://github.com/sensorcore/js">JS SDK</a> • <a href="https://github.com/sensorcore/crewai">CrewAI</a></li>
         <li><strong>OverCam</strong> — camera with ghost overlays, manual controls, on-device AI editing (relighting, background changes, retouching). Links: <a href="https://apps.apple.com/app/id6514316633">App Store</a> • <a href="/overcam">Website</a></li>
         <li><strong>EasyWallet</strong> — standalone <code>.pkpass</code> generator/editor with on-device signing (OpenSSL in Swift, no backend). Links: <a href="https://apps.apple.com/app/id6740567185">App Store</a></li>
@@ -177,19 +191,26 @@
       <div class="entry">
         <strong>Quality / Performance</strong>
         <ul class="tight">
-          <li>Instruments • Performance monitoring • Memory leak tracking  Architecture design • Clean Architecture • MVVM</li>
+          <li>Instruments • Performance monitoring • Memory leak tracking • Architecture design • Clean Architecture • MVVM</li>
+          <li>Metal • C / C++ • ARM64 / NEON SIMD • Low-level profiling & thermal-state tracking</li>
         </ul>
       </div>
       <div class="entry">
         <strong>Monetization / Analytics</strong>
         <ul class="tight">
-          <li>Subscriptions • RevenueCat • Adapty • Analytics</li>
+          <li>Subscriptions • RevenueCat • Adapty • StoreKit • Telegram Mini App billing • PostHog • Analytics</li>
         </ul>
       </div>
       <div class="entry">
         <strong>Backend / Infrastructure</strong>
         <ul class="tight">
-          <li>Vapor (Swift) • Firestore • NodeJS</li>
+          <li>.NET 10 (C#) • Python / FastAPI • Vapor (Swift) • NodeJS • PostgreSQL • Firestore • aiogram 3 • Telegram Bot API</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <strong>Web</strong>
+        <ul class="tight">
+          <li>React 19 • TypeScript • Telegram Mini Apps • JavaScript</li>
         </ul>
       </div>
       <div class="entry">
@@ -201,7 +222,7 @@
       <div class="entry">
         <strong>AI & Automation</strong>
         <ul class="tight">
-          <li>n8n • CrewAI • Claude Code • Codex • Antigravity • ComfyUI • Custom JS automation</li>
+          <li>n8n • CrewAI • Semantic Kernel • Agentic LLM pipelines • Tool calling • MCP • Claude Code • Codex • Antigravity • ComfyUI • Custom JS automation</li>
         </ul>
       </div>
       <div class="entry">
